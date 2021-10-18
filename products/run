@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd "$(dirname $0)"
+TMPDIR='/tmp/cc'
+SOURCE="$1"
+
+shift 1
+
+./make "$SOURCE" && "$TMPDIR/${SOURCE}.elf" "$@"
